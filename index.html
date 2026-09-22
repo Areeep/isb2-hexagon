@@ -1,190 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hexagon Team</title>
-</head>
+  </head>
 
-<body class="bg-gray-100 text-gray-900 transition-colors duration-300">
-
+  <body class="bg-gray-100 text-gray-900 transition-colors duration-300">
     <!-- ================= NAVBAR ================= -->
-    <nav id="navbar" class="bg-white text-gray-900 shadow-md transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav
+      id="navbar"
+      class="bg-white text-gray-900 shadow-md transition-colors duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <h1 class="text-2xl font-bold">Hexagon Team</h1>
 
-            <!-- Logo -->
-            <h1 class="text-2xl font-bold">
-                Hexagon Team
-            </h1>
-
-            <!-- Dark Mode Button -->
-            <button id="darkModeBtn" class="px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-700 transition">
-                🌙 Dark Mode
-            </button>
-
-        </div>
+        <!-- Dark Mode Button -->
+        <button
+          id="darkModeBtn"
+          class="px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-700 transition"
+        >
+          🌙 Dark Mode
+        </button>
+      </div>
     </nav>
-
 
     <!-- ================= CONTENT ================= -->
     <main id="movies" class="max-w-7xl mx-auto p-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- ===== CARD 1 - Beni Diktus Guintolim ===== -->
+        <article
+          class="px-8 py-16 flex flex-col gap-4 bg-[url('https://media.newyorker.com/photos/68b8689ed7872a699ef75132/4:3/w_2276,h_1707,c_limit/BRODY-EDDINGTON----E_00690R.jpg')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Drama </span>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <h1 class="font-bold text-2xl">Eddington</h1>
 
-            <!-- ===== CARD 1 - Beni Diktus Guintolim ===== -->
-            <article
-                class="px-8 py-16 flex flex-col gap-4 bg-[url('https://media.newyorker.com/photos/68b8689ed7872a699ef75132/4:3/w_2276,h_1707,c_limit/BRODY-EDDINGTON----E_00690R.jpg')] bg-cover bg-center text-white rounded-2xl">
+          <div class="flex gap-2 text-gray-200">
+            <p>2025 |</p>
+            <p>⭐ 6.6 |</p>
+            <p>2h 25m</p>
+          </div>
 
-                <span class="p-4 bg-gray-600/20 rounded-sm w-fit">Drama</span>
+          <p class="max-w-[40ch] line-clamp-3">
+            The main plot centers on the fierce rivalry and political standoff
+            between an aging town sheriff named Joe Cross (Joaquin Phoenix) and
+            the mayor, Ted Garcia (Pedro Pascal).
+          </p>
 
-                <h1 class="font-bold text-2xl">Eddington</h1>
+          <button
+            class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+            type="button"
+          >
+            <span class="like-icon">♡</span>
+            <span class="like-count">0</span>
+          </button>
+        </article>
 
-                <div class="flex gap-2 text-gray-200">
-                    <p>2025 |</p>
-                    <p>⭐ 6.6 |</p>
-                    <p>2h 25m</p>
-                </div>
+        <!-- ===== CARD 2 - Almira Hani Aulia ===== -->
+        <article
+          class="px-8 py-16 flex flex-col gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlV1M1BU3phroWg0eVlW6iNii9gSYWWZ7MXzboAx4gF2VnkDuOsxwrCyo&s=10')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Action </span>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    The main plot centers on the fierce rivalry and political standoff between an aging town sheriff
-                    named Joe Cross (Joaquin Phoenix) and the mayor, Ted Garcia (Pedro Pascal).
-                </p>
-            </article>
+          <h1 class="font-bold text-2xl">Lift</h1>
 
+          <div class="flex gap-2">
+            <p>2024 |</p>
+            <p>⭐ 5.6 |</p>
+            <p>1h 44m</p>
+          </div>
 
-            <!-- ===== CARD 2 - Almira Hani Aulia ===== -->
-            <article
-                class="px-8 py-16 flex flex-col gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlV1M1BU3phroWg0eVlW6iNii9gSYWWZ7MXzboAx4gF2VnkDuOsxwrCyo&s=10')] bg-cover bg-center text-white rounded-2xl">
+          <p class="max-w-[40ch] line-clamp-3">
+            Lift tells the story of an international team of thieves led by
+            Cyrus Whitaker. Together with his ex-girlfriend, they plan to steal
+            $500 million worth of gold bullion.
+          </p>
 
-                <span class="p-4 bg-gray-600/20 rounded-sm w-fit">Action</span>
+          <button
+            class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+            type="button"
+          >
+            <span class="like-icon">♡</span>
+            <span class="like-count">0</span>
+          </button>
+        </article>
 
-                <h1 class="font-bold text-2xl">Lift</h1>
+        <!-- ===== CARD 3 - Raja Azamghar Randa Rabbani ===== -->
+        <article
+          class="px-8 py-16 flex flex-col gap-4 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-1 bg-gray-950/40 rounded-md w-fit"> Adventure </span>
 
-                <div class="flex gap-2">
-                    <p>2024 |</p>
-                    <p>⭐ 5.6 |</p>
-                    <p>1h 44m</p>
-                </div>
+          <h1 class="font-bold text-2xl">AVATAR: THE WAY OF WATER</h1>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    Lift tells the story of an international team of thieves led by Cyrus Whitaker. Together with his
-                    ex-girlfriend, they plan to steal $500 million worth of gold bullion.
-                </p>
-            </article>
+          <div class="flex gap-2 p-1 rounded-lg w-fit">
+            <p>2022 |</p>
+            <p>⭐ 7.6 |</p>
+            <p>3h 12m</p>
+          </div>
 
+          <p class="max-w-[40ch] line-clamp-3">
+            Jake Sully lives with his newfound family formed on the extrasolar
+            moon Pandora. Once a familiar threat returns, Jake must work with
+            Neytiri and the Na'vi.
+          </p>
 
-            <!-- ===== CARD 3 - Raja Azamghar Randa Rabbani ===== -->
-            <article
-                class="px-8 py-16 flex flex-col gap-4 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200')] bg-cover bg-center text-white rounded-2xl">
+          <button
+            class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+            type="button"
+          >
+            <span class="like-icon">♡</span>
+            <span class="like-count">0</span>
+          </button>
+        </article>
 
-                <span class="p-1 bg-gray-950/40 rounded-md w-fit">Adventure</span>
+        <!-- ===== CARD 4 - Miqdad Albasyah ===== -->
+        <article
+          class="px-8 py-16 flex flex-col gap-4 bg-[url('https://cdn.informasi.com/informasi-public/media/images/spiderman-brand-new-day-31072026-1518.webp')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-1 bg-gray-950/40 rounded-md w-fit"> Action </span>
 
-                <h1 class="font-bold text-2xl">
-                    AVATAR: THE WAY OF WATER
-                </h1>
+          <h1 class="font-bold text-2xl max-w-[20ch]">
+            SPIDER-MAN BRAND NEW DAY
+          </h1>
 
-                <div class="flex gap-2 p-1 rounded-lg w-fit">
-                    <p>2022 |</p>
-                    <p>⭐ 7.6 |</p>
-                    <p>3h 12m</p>
-                </div>
+          <div class="flex gap-2 p-1 rounded-lg w-fit">
+            <p>2026 |</p>
+            <p>⭐ 8.0 |</p>
+            <p>2h 25m</p>
+          </div>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    Jake Sully lives with his newfound family formed on the extrasolar moon Pandora.
-                    Once a familiar threat returns, Jake must work with Neytiri and the Na'vi.
-                </p>
-            </article>
+          <p class="max-w-[40ch] line-clamp-3">
+            A forgotten Peter Parker lives alone as a full-time Spider-Man until
+            mounting pressure triggers a dangerous change and a powerful new
+            enemy emerges.
+          </p>
 
+          <button
+            class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+            type="button"
+          >
+            <span class="like-icon">♡</span>
+            <span class="like-count">0</span>
+          </button>
+        </article>
+        <!-- ===== CARD 5 - Lisa Sabila ===== -->
+        <article
+          class="px-8 py-16 flex flex-col gap-4 bg-[url('https://i.pinimg.com/1200x/bb/c3/5f/bbc35fb47595a25c224e98e8bc096a7a.jpg')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-2 bg-gray-50/20 rounded-sm w-fit"> Fantasy </span>
 
-            <!-- ===== CARD 4 - Miqdad Albasyah ===== -->
-            <article
-                class="px-8 py-16 flex flex-col gap-4 bg-[url('https://cdn.informasi.com/informasi-public/media/images/spiderman-brand-new-day-31072026-1518.webp')] bg-cover bg-center text-white rounded-2xl">
+          <h1 class="font-bold text-2xl">
+            Harry Potter and the Order of the Phoenix
+          </h1>
 
-                <span class="p-1 bg-gray-950/40 rounded-md w-fit">
-                    Action
-                </span>
+          <div class="flex gap-2 text-gray-400">
+            <p>2007 |</p>
+            <p>⭐ 7.5 |</p>
+            <p>2h 12m</p>
+          </div>
 
-                <h1 class="font-bold text-2xl max-w-[20ch]">
-                    SPIDER-MAN BRAND NEW DAY
-                </h1>
+          <p class="max-w-[40ch] line-clamp-3">
+            Lord Voldemort has returned, but the Ministry of Magic is doing
+            everything it can to keep the wizarding world from knowing the
+            truth.
+          </p>
 
-                <div class="flex gap-2 p-1 rounded-lg w-fit">
-                    <p>2026 |</p>
-                    <p>⭐ 8.0 |</p>
-                    <p>2h 25m</p>
-                </div>
+          <button
+            class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+            type="button"
+          >
+            <span class="like-icon">♡</span>
+            <span class="like-count">0</span>
+          </button>
+        </article>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    A forgotten Peter Parker lives alone as a full-time Spider-Man until mounting pressure triggers
-                    a dangerous change and a powerful new enemy emerges.
-                </p>
-            </article>
+        <!-- ===== CARD 6 - Azkafalah Cendikia Suryatmaja ===== -->
+        <article
+          class="px-8 py-16 flex flex-col gap-4 bg-[url('https://artworks.thetvdb.com/banners/v4/series/366211/backgrounds/62e025e502ae7.jpg')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Fantasy </span>
 
+          <h1 class="font-bold text-2xl">The Sandman</h1>
 
-            <!-- ===== CARD 5 - Lisa Sabila ===== -->
-            <article
-                class="px-8 py-16 flex flex-col gap-4 bg-[url('https://i.pinimg.com/1200x/bb/c3/5f/bbc35fb47595a25c224e98e8bc096a7a.jpg')] bg-cover bg-center text-white rounded-2xl">
+          <div class="flex gap-2">
+            <p>2022 |</p>
+            <p>⭐ 7.6 |</p>
+            <p>2 Season</p>
+          </div>
 
-                <span class="p-2 bg-gray-50/20 rounded-sm w-fit">
-                    Fantasy
-                </span>
+          <p class="max-w-[40ch] line-clamp-3">
+            After a century of captivity, the Lord of Dreams escapes and sets
+            out to rebuild his kingdom, confronting ancient enemies and the
+            consequences of his past.
+          </p>
 
-                <h1 class="font-bold text-2xl">
-                    Harry Potter and the Order of the Phoenix
-                </h1>
-
-                <div class="flex gap-2 text-gray-400">
-                    <p>2007 |</p>
-                    <p>⭐ 7.5 |</p>
-                    <p>2h 12m</p>
-                </div>
-
-                <p class="max-w-[40ch] line-clamp-3">
-                    Lord Voldemort has returned, but the Ministry of Magic is doing everything it can to keep the
-                    wizarding world from knowing the truth.
-                </p>
-            </article>
-
-
-            <!-- ===== CARD 6 - Azkafalah Cendikia Suryatmaja ===== -->
-            <article
-                class="px-8 py-16 flex flex-col gap-4 bg-[url('https://artworks.thetvdb.com/banners/v4/series/366211/backgrounds/62e025e502ae7.jpg')] bg-cover bg-center text-white rounded-2xl">
-
-                <span class="p-4 bg-gray-600/20 rounded-sm w-fit">
-                    Fantasy
-                </span>
-
-                <h1 class="font-bold text-2xl">
-                    The Sandman
-                </h1>
-
-                <div class="flex gap-2">
-                    <p>2022 |</p>
-                    <p>⭐ 7.6 |</p>
-                    <p>2 Season</p>
-                </div>
-
-                <p class="max-w-[40ch] line-clamp-3">
-                    After a century of captivity, the Lord of Dreams escapes and sets out to rebuild his kingdom,
-                    confronting ancient enemies and the consequences of his past.
-                </p>
-            </article>
-
-        </div>
+          <button
+            class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+            type="button"
+          >
+            <span class="like-icon">♡</span>
+            <span class="like-count">0</span>
+          </button>
+        </article>
+      </div>
     </main>
 
-
-    <!-- Tailwind CSS -->
+    <!-- ================= TAILWIND CSS ================= -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Dark Mode -->
+    <!-- ================= DARK MODE ================= -->
     <script src="darkMode.js"></script>
 
-
-    <!-- Modal -->
+    <!-- ================= MODAL ================= -->
     <script src="modal.js"></script>
 
-</body>
-
+    <!-- ================= LIKE / FAVORITE ================= -->
+    <script src="like.js"></script>
+  </body>
 </html>
