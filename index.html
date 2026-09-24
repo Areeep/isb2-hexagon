@@ -1,290 +1,369 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hexagon Team</title>
-</head>
+  </head>
 
-<body class="bg-gray-100 text-gray-900 transition-colors duration-300">
+  <body class="bg-gray-100 text-gray-900 transition-colors duration-300">
     <!-- ================= NAVBAR ================= -->
-    <nav id="navbar" class="bg-white text-gray-900 shadow-md transition-colors duration-300 sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <!-- Logo -->
-            <h1 class="text-2xl font-bold">Hexagon Team</h1>
+    <nav
+      id="navbar"
+      class="bg-white text-gray-900 shadow-md transition-colors duration-300 sticky top-0 z-40"
+    >
+      <div class="px-8 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <h1 class="text-2xl font-bold">Hexagon Team</h1>
 
-            <div class="flex gap-2 items-center">
-                <button id="btnOpenForm" type="button"
-                    class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition font-semibold">
-                    + Tambah Film
-                </button>
+        <div class="flex gap-2 items-center">
+          <button
+            id="btnOpenForm"
+            type="button"
+            class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition font-semibold"
+          >
+            + Tambah Film
+          </button>
 
-                <!-- Dark Mode Button -->
-                <button id="darkModeBtn" type="button"
-                    class="px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-700 transition">
-                    🌙 Dark Mode
-                </button>
+          <!-- Dark Mode Button -->
+          <button
+            id="darkModeBtn"
+            type="button"
+            class="px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-700 transition"
+          >
+            🌙 Dark Mode
+          </button>
 
-                <!-- Random Color Button -->
-                <button id="randomColorBtn" type="button"
-                    class="px-4 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-700 transition">
-                    🎨 Random Text Color
-                </button>
-            </div>
+          <!-- Random Color Button -->
+          <button
+            id="randomColorBtn"
+            type="button"
+            class="px-4 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-700 transition"
+          >
+            🎨 Random Text Color
+          </button>
         </div>
+      </div>
     </nav>
 
     <!-- ================= MODAL FORM TAMBAH FILM (FITUR 1) ================= -->
-    <div id="modalFormContainer" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4">
-        <div class="bg-gray-900 text-white p-6 rounded-2xl w-full max-w-md shadow-2xl relative border border-gray-800">
-            <!-- Tombol Close Modal -->
-            <button id="btnCloseForm" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">
-                ✕
-            </button>
+    <div
+      id="modalFormContainer"
+      class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4"
+    >
+      <div
+        class="bg-gray-900 text-white p-6 rounded-2xl w-full max-w-md shadow-2xl relative border border-gray-800"
+      >
+        <!-- Tombol Close Modal -->
+        <button
+          id="btnCloseForm"
+          type="button"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold"
+        >
+          ✕
+        </button>
 
-            <h2 class="text-xl font-bold mb-4 text-blue-400">Tambah Film Baru</h2>
+        <h2 class="text-xl font-bold mb-4 text-blue-400">Tambah Film Baru</h2>
 
-            <form id="card-form" class="flex flex-col gap-3">
-                <div>
-                    <label class="block text-xs text-gray-400 mb-1">Judul Film</label>
-                    <input type="text" id="card-title" placeholder="Judul Film" required
-                        class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500" />
-                </div>
+        <form id="card-form" class="flex flex-col gap-3">
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">Judul Film</label>
+            <input
+              type="text"
+              id="card-title"
+              placeholder="Judul Film"
+              required
+              class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500"
+            />
+          </div>
 
-                <div>
-                    <label class="block text-xs text-gray-400 mb-1">Genre</label>
-                    <input type="text" id="card-genre" placeholder="Genre (contoh: Action, Drama)" required
-                        class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500" />
-                </div>
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">Genre</label>
+            <input
+              type="text"
+              id="card-genre"
+              placeholder="Genre (contoh: Action, Drama)"
+              required
+              class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500"
+            />
+          </div>
 
-                <div>
-                    <label class="block text-xs text-gray-400 mb-1">Info Meta</label>
-                    <input type="text" id="card-meta" placeholder="Info Meta (contoh: 2026 | ⭐ 8.0 | 2h 15m)" required
-                        class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500" />
-                </div>
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">Info Meta</label>
+            <input
+              type="text"
+              id="card-meta"
+              placeholder="Info Meta (contoh: 2026 | ⭐ 8.0 | 2h 15m)"
+              required
+              class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500"
+            />
+          </div>
 
-                <div>
-                    <label class="block text-xs text-gray-400 mb-1">Deskripsi Film</label>
-                    <textarea id="card-desc" placeholder="Deskripsi Film" required rows="3"
-                        class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500 resize-none"></textarea>
-                </div>
+          <div>
+            <label class="block text-xs text-gray-400 mb-1"
+              >Deskripsi Film</label
+            >
+            <textarea
+              id="card-desc"
+              placeholder="Deskripsi Film"
+              required
+              rows="3"
+              class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500 resize-none"
+            ></textarea>
+          </div>
 
-                <div>
-                    <label class="block text-xs text-gray-400 mb-1">URL Link Gambar</label>
-                    <input type="url" id="card-image" placeholder="URL Link Gambar (https://...)" required
-                        class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500" />
-                </div>
+          <div>
+            <label class="block text-xs text-gray-400 mb-1"
+              >URL Link Gambar</label
+            >
+            <input
+              type="url"
+              id="card-image"
+              placeholder="URL Link Gambar (https://...)"
+              required
+              class="w-full p-2.5 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:border-blue-500"
+            />
+          </div>
 
-                <button type="submit"
-                    class="mt-2 py-2.5 px-4 bg-blue-600 hover:bg-blue-700 transition font-bold rounded-lg text-white">
-                    + Tambah Card
-                </button>
-            </form>
-        </div>
+          <button
+            type="submit"
+            class="mt-2 py-2.5 px-4 bg-blue-600 hover:bg-blue-700 transition font-bold rounded-lg text-white"
+          >
+            + Tambah Card
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- ================= CONTENT ================= -->
-    <main id="movies" class="max-w-7xl mx-auto p-6">
-        <div id="gallery-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <main id="movies" class="p-6">
+      <div id="gallery-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- ===== CARD 1 - Beni Diktus Guintolim ===== -->
+        <article
+          class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://media.newyorker.com/photos/68b8689ed7872a699ef75132/4:3/w_2276,h_1707,c_limit/BRODY-EDDINGTON----E_00690R.jpg')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Drama </span>
 
-            <!-- ===== CARD 1 - Beni Diktus Guintolim ===== -->
-            <article
-                class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://media.newyorker.com/photos/68b8689ed7872a699ef75132/4:3/w_2276,h_1707,c_limit/BRODY-EDDINGTON----E_00690R.jpg')] bg-cover bg-center text-white rounded-2xl">
-                <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Drama </span>
+          <h1 class="font-bold text-2xl">Eddington</h1>
 
-                <h1 class="font-bold text-2xl">Eddington</h1>
+          <div class="flex gap-2 text-gray-200">
+            <p>2025 |</p>
+            <p>⭐ 6.6 |</p>
+            <p>2h 25m</p>
+          </div>
 
-                <div class="flex gap-2 text-gray-200">
-                    <p>2025 |</p>
-                    <p>⭐ 6.6 |</p>
-                    <p>2h 25m</p>
-                </div>
+          <p class="max-w-[40ch] line-clamp-3">
+            The main plot centers on the fierce rivalry and political standoff
+            between an aging town sheriff named Joe Cross (Joaquin Phoenix) and
+            the mayor, Ted Garcia (Pedro Pascal).
+          </p>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    The main plot centers on the fierce rivalry and political standoff
-                    between an aging town sheriff named Joe Cross (Joaquin Phoenix) and
-                    the mayor, Ted Garcia (Pedro Pascal).
-                </p>
+          <div class="flex gap-2">
+            <button
+              class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+              type="button"
+            >
+              <span class="like-icon">♡</span>
+              <span class="like-count">0</span>
+            </button>
+            <button
+              class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
+              type="button"
+            >
+              Hapus
+            </button>
+          </div>
+        </article>
 
-                <div class="flex gap-2">
-                    <button class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
-                        type="button">
-                        <span class="like-icon">♡</span>
-                        <span class="like-count">0</span>
-                    </button>
-                    <button class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
-                        type="button">
-                        Hapus
-                    </button>
-                </div>
-            </article>
+        <!-- ===== CARD 2 - Almira Hani Aulia ===== -->
+        <article
+          class="movie-card px-8 py-16 flex flex-col gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlV1M1BU3phroWg0eVlW6iNii9gSYWWZ7MXzboAx4gF2VnkDuOsxwrCyo&s=10')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Action </span>
 
-            <!-- ===== CARD 2 - Almira Hani Aulia ===== -->
-            <article
-                class="movie-card px-8 py-16 flex flex-col gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlV1M1BU3phroWg0eVlW6iNii9gSYWWZ7MXzboAx4gF2VnkDuOsxwrCyo&s=10')] bg-cover bg-center text-white rounded-2xl">
-                <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Action </span>
+          <h1 class="font-bold text-2xl">Lift</h1>
 
-                <h1 class="font-bold text-2xl">Lift</h1>
+          <div class="flex gap-2">
+            <p>2024 |</p>
+            <p>⭐ 5.6 |</p>
+            <p>1h 44m</p>
+          </div>
 
-                <div class="flex gap-2">
-                    <p>2024 |</p>
-                    <p>⭐ 5.6 |</p>
-                    <p>1h 44m</p>
-                </div>
+          <p class="max-w-[40ch] line-clamp-3">
+            Lift tells the story of an international team of thieves led by
+            Cyrus Whitaker. Together with his ex-girlfriend, they plan to steal
+            $500 million worth of gold bullion.
+          </p>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    Lift tells the story of an international team of thieves led by
-                    Cyrus Whitaker. Together with his ex-girlfriend, they plan to steal
-                    $500 million worth of gold bullion.
-                </p>
+          <div class="flex gap-2">
+            <button
+              class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+              type="button"
+            >
+              <span class="like-icon">♡</span>
+              <span class="like-count">0</span>
+            </button>
+            <button
+              class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
+              type="button"
+            >
+              Hapus
+            </button>
+          </div>
+        </article>
 
-                <div class="flex gap-2">
-                    <button class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
-                        type="button">
-                        <span class="like-icon">♡</span>
-                        <span class="like-count">0</span>
-                    </button>
-                    <button class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
-                        type="button">
-                        Hapus
-                    </button>
-                </div>
-            </article>
+        <!-- ===== CARD 3 - Raja Azamghar Randa Rabbani ===== -->
+        <article
+          class="movie-card px-8 py-16 flex flex-col gap-4 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-1 bg-gray-950/40 rounded-md w-fit"> Adventure </span>
 
-            <!-- ===== CARD 3 - Raja Azamghar Randa Rabbani ===== -->
-            <article
-                class="movie-card px-8 py-16 flex flex-col gap-4 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200')] bg-cover bg-center text-white rounded-2xl">
-                <span class="p-1 bg-gray-950/40 rounded-md w-fit"> Adventure </span>
+          <h1 class="font-bold text-2xl">AVATAR: THE WAY OF WATER</h1>
 
-                <h1 class="font-bold text-2xl">AVATAR: THE WAY OF WATER</h1>
+          <div class="flex gap-2 p-1 rounded-lg w-fit">
+            <p>2022 |</p>
+            <p>⭐ 7.6 |</p>
+            <p>3h 12m</p>
+          </div>
 
-                <div class="flex gap-2 p-1 rounded-lg w-fit">
-                    <p>2022 |</p>
-                    <p>⭐ 7.6 |</p>
-                    <p>3h 12m</p>
-                </div>
+          <p class="max-w-[40ch] line-clamp-3">
+            Jake Sully lives with his newfound family formed on the extrasolar
+            moon Pandora. Once a familiar threat returns, Jake must work with
+            Neytiri and the Na'vi.
+          </p>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    Jake Sully lives with his newfound family formed on the extrasolar
-                    moon Pandora. Once a familiar threat returns, Jake must work with
-                    Neytiri and the Na'vi.
-                </p>
+          <div class="flex gap-2">
+            <button
+              class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+              type="button"
+            >
+              <span class="like-icon">♡</span>
+              <span class="like-count">0</span>
+            </button>
+            <button
+              class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
+              type="button"
+            >
+              Hapus
+            </button>
+          </div>
+        </article>
 
-                <div class="flex gap-2">
-                    <button class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
-                        type="button">
-                        <span class="like-icon">♡</span>
-                        <span class="like-count">0</span>
-                    </button>
-                    <button class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
-                        type="button">
-                        Hapus
-                    </button>
-                </div>
-            </article>
+        <!-- ===== CARD 4 - Miqdad Albasyah ===== -->
+        <article
+          class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqYocVhjYcKC4VV8YfY3SDkAQaAjQLL9IfBCQjf7yr7w&s=10')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-1 bg-gray-950/40 rounded-md w-fit"> Action </span>
 
-            <!-- ===== CARD 4 - Miqdad Albasyah ===== -->
-            <article
-                class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqYocVhjYcKC4VV8YfY3SDkAQaAjQLL9IfBCQjf7yr7w&s=10')] bg-cover bg-center text-white rounded-2xl">
-                <span class="p-1 bg-gray-950/40 rounded-md w-fit"> Action </span>
+          <h1 class="font-bold text-2xl max-w-[20ch]">
+            SPIDER-MAN BRAND NEW DAY
+          </h1>
 
-                <h1 class="font-bold text-2xl max-w-[20ch]">
-                    SPIDER-MAN BRAND NEW DAY
-                </h1>
+          <div class="flex gap-2 p-1 rounded-lg w-fit">
+            <p>2026 |</p>
+            <p>⭐ 8.0 |</p>
+            <p>2h 25m</p>
+          </div>
 
-                <div class="flex gap-2 p-1 rounded-lg w-fit">
-                    <p>2026 |</p>
-                    <p>⭐ 8.0 |</p>
-                    <p>2h 25m</p>
-                </div>
+          <p class="max-w-[40ch] line-clamp-3">
+            A forgotten Peter Parker lives alone as a full-time Spider-Man until
+            mounting pressure triggers a dangerous change and a powerful new
+            enemy emerges.
+          </p>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    A forgotten Peter Parker lives alone as a full-time Spider-Man until
-                    mounting pressure triggers a dangerous change and a powerful new
-                    enemy emerges.
-                </p>
+          <div class="flex gap-2">
+            <button
+              class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+              type="button"
+            >
+              <span class="like-icon">♡</span>
+              <span class="like-count">0</span>
+            </button>
+            <button
+              class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
+              type="button"
+            >
+              Hapus
+            </button>
+          </div>
+        </article>
 
-                <div class="flex gap-2">
-                    <button class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
-                        type="button">
-                        <span class="like-icon">♡</span>
-                        <span class="like-count">0</span>
-                    </button>
-                    <button class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
-                        type="button">
-                        Hapus
-                    </button>
-                </div>
-            </article>
+        <!-- ===== CARD 5 - Lisa Sabila ===== -->
+        <article
+          class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://i.pinimg.com/1200x/bb/c3/5f/bbc35fb47595a25c224e98e8bc096a7a.jpg')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-2 bg-gray-50/20 rounded-sm w-fit"> Fantasy </span>
 
-            <!-- ===== CARD 5 - Lisa Sabila ===== -->
-            <article
-                class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://i.pinimg.com/1200x/bb/c3/5f/bbc35fb47595a25c224e98e8bc096a7a.jpg')] bg-cover bg-center text-white rounded-2xl">
-                <span class="p-2 bg-gray-50/20 rounded-sm w-fit"> Fantasy </span>
+          <h1 class="font-bold text-2xl">
+            Harry Potter and the Order of the Phoenix
+          </h1>
 
-                <h1 class="font-bold text-2xl">
-                    Harry Potter and the Order of the Phoenix
-                </h1>
+          <div class="flex gap-2 text-gray-400">
+            <p>2007 |</p>
+            <p>⭐ 7.5 |</p>
+            <p>2h 12m</p>
+          </div>
 
-                <div class="flex gap-2 text-gray-400">
-                    <p>2007 |</p>
-                    <p>⭐ 7.5 |</p>
-                    <p>2h 12m</p>
-                </div>
+          <p class="max-w-[40ch] line-clamp-3">
+            Lord Voldemort has returned, but the Ministry of Magic is doing
+            everything it can to keep the wizarding world from knowing the
+            truth.
+          </p>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    Lord Voldemort has returned, but the Ministry of Magic is doing
-                    everything it can to keep the wizarding world from knowing the
-                    truth.
-                </p>
+          <div class="flex gap-2">
+            <button
+              class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+              type="button"
+            >
+              <span class="like-icon">♡</span>
+              <span class="like-count">0</span>
+            </button>
+            <button
+              class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
+              type="button"
+            >
+              Hapus
+            </button>
+          </div>
+        </article>
 
-                <div class="flex gap-2">
-                    <button class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
-                        type="button">
-                        <span class="like-icon">♡</span>
-                        <span class="like-count">0</span>
-                    </button>
-                    <button class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
-                        type="button">
-                        Hapus
-                    </button>
-                </div>
-            </article>
+        <!-- ===== CARD 6 - Azkafalah Cendikia Suryatmaja ===== -->
+        <article
+          class="movie-card px-8 py-16 flex flex-col gap-4 bg-[url('https://artworks.thetvdb.com/banners/v4/series/366211/backgrounds/62e025e502ae7.jpg')] bg-cover bg-center text-white rounded-2xl"
+        >
+          <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Fantasy </span>
 
-            <!-- ===== CARD 6 - Azkafalah Cendikia Suryatmaja ===== -->
-            <article
-                class="movie-card px-8 py-16 flex flex-col gap-4 bg-[url('https://artworks.thetvdb.com/banners/v4/series/366211/backgrounds/62e025e502ae7.jpg')] bg-cover bg-center text-white rounded-2xl">
-                <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Fantasy </span>
+          <h1 class="font-bold text-2xl">The Sandman</h1>
 
-                <h1 class="font-bold text-2xl">The Sandman</h1>
+          <div class="flex gap-2">
+            <p>2022 |</p>
+            <p>⭐ 7.6 |</p>
+            <p>2 Season</p>
+          </div>
 
-                <div class="flex gap-2">
-                    <p>2022 |</p>
-                    <p>⭐ 7.6 |</p>
-                    <p>2 Season</p>
-                </div>
+          <p class="max-w-[40ch] line-clamp-3">
+            After a century of captivity, the Lord of Dreams escapes and sets
+            out to rebuild his kingdom, confronting ancient enemies and the
+            consequences of his past.
+          </p>
 
-                <p class="max-w-[40ch] line-clamp-3">
-                    After a century of captivity, the Lord of Dreams escapes and sets
-                    out to rebuild his kingdom, confronting ancient enemies and the
-                    consequences of his past.
-                </p>
-
-                <div class="flex gap-2">
-                    <button class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
-                        type="button">
-                        <span class="like-icon">♡</span>
-                        <span class="like-count">0</span>
-                    </button>
-                    <button class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
-                        type="button">
-                        Hapus
-                    </button>
-                </div>
-            </article>
-
-        </div>
+          <div class="flex gap-2">
+            <button
+              class="like-btn w-fit px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
+              type="button"
+            >
+              <span class="like-icon">♡</span>
+              <span class="like-count">0</span>
+            </button>
+            <button
+              class="delete-btn w-fit px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition"
+              type="button"
+            >
+              Hapus
+            </button>
+          </div>
+        </article>
+      </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -295,6 +374,5 @@
     <script src="like.js"></script>
     <script src="randomColor.js"></script>
     <script src="delete.js"></script>
-</body>
-
+  </body>
 </html>
