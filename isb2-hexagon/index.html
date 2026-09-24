@@ -10,12 +10,9 @@
 <body class="bg-gray-100 text-gray-900 transition-colors duration-300">
     <!-- ================= NAVBAR ================= -->
     <nav id="navbar" class="bg-white text-gray-900 shadow-md transition-colors duration-300 sticky top-0 z-40">
-        <div class="px-8 py-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <!-- Logo -->
-             <div class="flex gap-4">
-            <img src="images/logo hexagon.png" alt="Logo Hexagon" class="size-10">
             <h1 class="text-2xl font-bold">Hexagon Team</h1>
-             </div>
 
             <div class="flex gap-2 items-center">
                 <button id="btnOpenForm" type="button"
@@ -42,8 +39,7 @@
     <div id="modalFormContainer" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4">
         <div class="bg-gray-900 text-white p-6 rounded-2xl w-full max-w-md shadow-2xl relative border border-gray-800">
             <!-- Tombol Close Modal -->
-            <button id="btnCloseForm" type="button"
-                class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">
+            <button id="btnCloseForm" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">
                 ✕
             </button>
 
@@ -89,8 +85,9 @@
     </div>
 
     <!-- ================= CONTENT ================= -->
-    <main id="movies" class="p-6">
+    <main id="movies" class="max-w-7xl mx-auto p-6">
         <div id="gallery-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
             <!-- ===== CARD 1 - Beni Diktus Guintolim ===== -->
             <article
                 class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://media.newyorker.com/photos/68b8689ed7872a699ef75132/4:3/w_2276,h_1707,c_limit/BRODY-EDDINGTON----E_00690R.jpg')] bg-cover bg-center text-white rounded-2xl">
@@ -125,7 +122,7 @@
 
             <!-- ===== CARD 2 - Almira Hani Aulia ===== -->
             <article
-                class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlV1M1BU3phroWg0eVlW6iNii9gSYWWZ7MXzboAx4gF2VnkDuOsxwrCyo&s=10')] bg-cover bg-center text-white rounded-2xl">
+                class="movie-card px-8 py-16 flex flex-col gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlV1M1BU3phroWg0eVlW6iNii9gSYWWZ7MXzboAx4gF2VnkDuOsxwrCyo&s=10')] bg-cover bg-center text-white rounded-2xl">
                 <span class="p-4 bg-gray-600/20 rounded-sm w-fit"> Action </span>
 
                 <h1 class="font-bold text-2xl">Lift</h1>
@@ -189,7 +186,7 @@
 
             <!-- ===== CARD 4 - Miqdad Albasyah ===== -->
             <article
-                class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqYocVhjYcKC4VV8YfY3SDkAQaAjQLL9IfBCQjf7yr7w&s=10')] bg-cover bg-center text-white rounded-2xl">
+                class="movie-card px-8 py-8 flex flex-col gap-4 bg-[url('https://cdn.informasi.com/informasi-public/media/images/spiderman-brand-new-day-31072026-1518.webp')] bg-cover bg-center text-white rounded-2xl">
                 <span class="p-1 bg-gray-950/40 rounded-md w-fit"> Action </span>
 
                 <h1 class="font-bold text-2xl max-w-[20ch]">
@@ -286,6 +283,7 @@
                     </button>
                 </div>
             </article>
+
         </div>
     </main>
 
