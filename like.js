@@ -13,10 +13,10 @@ likeButtons.forEach((button, index) => {
   countElement.textContent = count;
 
   if (isLiked) {
-    button.classList.add("liked", "text-red-500");
+    button.classList.add("liked", "text-red-700");
     icon.textContent = "♥";
   } else {
-    button.classList.remove("liked", "text-red-500");
+    button.classList.remove("liked", "text-red-700");
     icon.textContent = "♡";
   }
 
@@ -27,14 +27,14 @@ likeButtons.forEach((button, index) => {
     if (isLiked) {
       isLiked = false;
 
-      button.classList.remove("liked", "text-red-500");
+      button.classList.remove("liked", "text-red-700");
       icon.textContent = "♡";
 
       count--;
     } else {
       isLiked = true;
 
-      button.classList.add("liked", "text-red-500");
+      button.classList.add("liked", "text-red-700");
       icon.textContent = "♥";
 
       count++;
