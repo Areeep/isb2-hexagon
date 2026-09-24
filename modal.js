@@ -1,23 +1,36 @@
 const cards = document.querySelectorAll("article");
 
 const synopsis = [
-  `The main plot centers on the fierce rivalry and political standoff between an aging town sheriff
-    named Joe Cross (Joaquin Phoenix) and the mayor, Ted Garcia (Pedro Pascal).`,
+  `The main plot centers on the fierce rivalry and political standoff between an aging town sheriff,
+    Joe Cross, and the ambitious mayor, Ted Garcia. As tensions continue to rise in their small town,
+    both men struggle to maintain control while their personal conflicts become increasingly difficult
+    to separate from their political ambitions.`,
 
-  `Lift tells the story of an international team of thieves led by Cyrus Whitaker. Together with his
-    ex-girlfriend, they plan to steal $500 million worth of gold bullion.`,
+  `Lift follows Cyrus Whitaker, an experienced thief, and his international team of criminals as they
+    attempt to steal $500 million worth of gold bullion from a passenger plane. With carefully planned
+    strategies, advanced technology, and plenty of risks along the way, the team must work together
+    to complete the impossible heist while staying one step ahead of the authorities.`,
 
-  `Jake Sully lives with his newfound family formed on the extrasolar moon Pandora.
-    Once a familiar threat returns, Jake must work with Neytiri and the Na'vi.`,
+  `Jake Sully now lives peacefully with his family on the beautiful moon of Pandora, where he has
+    created a new life among the Na'vi. When a familiar and dangerous threat returns, Jake and Neytiri
+    are forced to leave their home and fight to protect their family. Along the way, they must face
+    new challenges while defending Pandora from those who seek to destroy it.`,
 
-  `A forgotten Peter Parker lives alone as a full-time Spider-Man until mounting pressure triggers
-    a dangerous change and a powerful new enemy emerges.`,
+  `A forgotten Peter Parker lives alone while continuing to protect the city as Spider-Man, struggling
+    to balance his ordinary life with the responsibilities of being a hero. As the pressure around him
+    continues to grow, a dangerous change begins to take place. With a powerful new enemy emerging,
+    Peter must confront his fears and the consequences of the choices he has made in the past.`,
 
-  `Lord Voldemort has returned, but the Ministry of Magic is doing everything it can to keep the
-    wizarding world from knowing the truth.`,
+  `Lord Voldemort has returned, but the Ministry of Magic refuses to believe that the Dark Lord is back.
+    While Harry Potter struggles to convince the wizarding world of the growing danger, he finds support
+    among a secret group of young wizards. Together, they begin learning how to defend themselves and
+    prepare for the difficult battle that lies ahead as Voldemort's influence continues to grow.`,
 
-  `After a century of captivity, the Lord of Dreams escapes and sets out to rebuild his kingdom,
-    confronting ancient enemies and the consequences of his past.`,
+  `After being imprisoned for more than a century, Dream, the powerful Lord of Dreams, finally escapes
+    and discovers that his once-great kingdom has fallen into ruin. Determined to restore the realm of
+    dreams, he must recover his stolen tools and regain the power he has lost over the years. Along the
+    way, Dream encounters ancient beings, dangerous enemies, and the consequences of decisions from his
+    distant past, forcing him to confront both his responsibilities and the changing world around him.`
 ];
 
 const modal = document.createElement("div");
